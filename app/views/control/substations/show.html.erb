@@ -1,0 +1,143 @@
+<div class="row"><br></div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe,control_substations_path %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3>Detalles de la subestación <span class="label label-default"> <%= @substation.nombre_subestacion %></span></h3></div>
+    <div class="panel-body">
+    <div class="row"><br></div>
+    <div class="row"><br></div>
+     <div class="row">
+     <div class="col-xs-6 col-md-3">
+       <p>
+        <strong>Nombre:</strong>
+        <%= @substation.nombre_subestacion %>
+       </p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+       <p>
+        <strong>Subestacion abbr:</strong>
+        <%= @substation.subestacion_abbr %>
+       </p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Direccion:</strong>
+          <%= @substation.direccion %>
+        </p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+       <p>
+         <strong>Extencion:</strong>
+         <%= @substation.extencion %>
+       </p>
+      </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Encargado nombre:</strong>
+          <%= @substation.encargado_nombre %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+         <strong>Encargado apellidos:</strong>
+         <%= @substation.encargado_apellidos %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+         <strong>Capacidad:</strong>
+         <%= @substation.capacidad %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Fecha puesta servicio:</strong>
+          <%= @substation.fecha_puesta_servicio %>
+        </p>
+       </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Latitud:</strong>
+            <%= @substation.latitude %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Latitud:</strong>
+            <%= @substation.longitude %>
+        </p>
+       </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row"> 
+      <div class="col-md-1"></div>
+      <div class="col-md-1">
+
+
+
+          <script src="//maps.google.com/maps/api/js?key=AIzaSyC3ZuJz4vMSOud-Qy8Gny4AUPZQNBcDUl0"></script>
+            <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+
+
+
+
+            <div style='width: 800px;'>
+              <div id="map" style='width: 800px; height: 400px;'></div>
+            </div>
+
+
+            <script type="text/javascript">
+            var latt='<%= @substation.latitude %>';
+            var lngg='<%=@substation.longitude%>';
+
+            handler = Gmaps.build('Google');
+            handler.buildMap({ internal: {id: 'map'}}, function(){
+              markers = handler.addMarkers([
+                {
+                  lat: latt,
+                  lng: lngg,
+                  picture: {
+                    url: "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+                    width:  36,
+                    height: 36
+                  },
+                  infowindow: "Quemado!"
+                }
+              ]);
+            });
+
+
+
+            </script>
+            </div>
+            </div>
+
+
+     <div class="row"><br></div>
+     <div class="row"><br></div>
+     <div class="row show-grid">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-md-offset-5 float_right">
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+               <div class="btn-group" role="group" aria-label="...">
+                  <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-pencil" aria-hidden="true"></i>   Editar Subestación</button>'.html_safe,  edit_control_substation_path(@substation)%>
+               </div>
+            </div>
+        </div>
+     </div>
+    </div>
+  </div>
+
+
+</div>

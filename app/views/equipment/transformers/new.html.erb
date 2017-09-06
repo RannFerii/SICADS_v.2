@@ -1,0 +1,14 @@
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe, equipment_transformers_path  %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"> <h4><b>Nuevo Transformador</b></h4></div>
+      <div class="panel-body">
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+		<%= render 'form', equipment_transformer: @equipment_transformer %>
+

@@ -1,0 +1,78 @@
+<div class="fuentesd">
+<div class="sign-container">
+  <section id="sigin">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                  <h1><i class="fa fa-sign-in" aria-hidden="true"></i> Registro</h1>
+                      <div role="form" action="javascript:;" method="post" id="sigin-form" autocomplete="off">
+                        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                          <%= f.error_notification %>
+                          <div class="form-group">
+                              <%= f.input :rpe, required: true, autofocus: true ,label: 'RPE',class_html: { class: 'form-control' }  %>
+                          </div>
+                          <div class="form-group">
+                              <%= f.input :nombre, required: true,autofocus: true ,label: 'Nombre',class_html: { class: 'form-control' }  %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.input :apellido_paterno, required: true, autofocus: true ,label: 'Apellido paterno',class_html: { class: 'form-control' }  %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.input :apellido_materno,  required: true, autofocus: true ,label: 'Apellido materno',class_html: { class: 'form-control' }  %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.input :email, required: true, autofocus: true ,label: 'Email',class_html: { class: 'form-control' }  %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.label :Tipo_de_usuario %><br />
+                            <%= f.select :role, User.roles.keys.to_a, { prompt: '- Seleccionar -' } ,{class:"selectpicker show-tick"} %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} caracteres mínimo" if @minimum_password_length),label: 'Contraseña',class_html: { class: 'form-control' }  %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.input :password_confirmation, required: true ,label: 'Confirmación de la contraseña',class_html: { class: 'form-control' }  %>
+                          </div>
+ 
+                          <div class="checkbox">
+                              <!-- <span class="character-checkbox" onclick="showPassword()"></span> -->
+                              <!-- <span class="label">Mostrar contraseña</span> -->
+                          </div>
+                          <input type="submit" id="btn-sigin" class="btn btn-custom btn-lg btn-block" value="Registrarse">
+                      </div>
+                      <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">¿Olvidaste la contraseña?</a>
+                      <div class="forget"><%= render "users/shared/links" %></div>
+                      <hr>
+                      <% end %>
+                      
+                </div>
+          </div> <!-- /.col-xs-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+  </section>
+
+  <div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Cerrar</span>
+          </button>
+          <h4 class="modal-title">Recuperar contraseña</h4>
+        </div>
+        <div class="modal-body">
+          <p>Type your email account</p>
+          <input type="email" name="recovery-email" id="recovery-email" class="form-control" autocomplete="off">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-custom">Recovery</button>
+        </div>
+      </div> <!-- /.modal-content -->
+    </div> <!-- /.modal-dialog -->
+  </div> <!-- /.modal -->
+</div>
+
+</div>

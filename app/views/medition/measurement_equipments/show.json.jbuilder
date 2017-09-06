@@ -1,0 +1,1 @@
+json.partial! "medition_measurement_equipments/medition_measurement_equipment", medition_measurement_equipment: @medition_measurement_equipment

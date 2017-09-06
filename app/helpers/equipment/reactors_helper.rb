@@ -1,0 +1,2 @@
+module Equipment::ReactorsHelper
+end

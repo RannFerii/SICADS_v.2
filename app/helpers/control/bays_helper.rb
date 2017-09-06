@@ -1,0 +1,2 @@
+module Control::BaysHelper
+end

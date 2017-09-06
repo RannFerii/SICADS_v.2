@@ -1,0 +1,1 @@
+json.partial! "equipment_lightning_arresters/equipment_lightning_arrester", equipment_lightning_arrester: @equipment_lightning_arrester

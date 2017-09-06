@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomenclatura: MyString
+  cuchilla_type: MyString
+  mecanismo_type: MyString
+  nivel_basico_impulso: MyString
+  marca: MyString
+  num_serie: MyString
+  kv_nom: MyString
+  amp_nom: MyString
+  tension_sistema: MyString
+  fecha_puesta_servicio: 2017-08-30
+  fecha_fabricacion: 2017-08-30
+
+two:
+  nomenclatura: MyString
+  cuchilla_type: MyString
+  mecanismo_type: MyString
+  nivel_basico_impulso: MyString
+  marca: MyString
+  num_serie: MyString
+  kv_nom: MyString
+  amp_nom: MyString
+  tension_sistema: MyString
+  fecha_puesta_servicio: 2017-08-30
+  fecha_fabricacion: 2017-08-30

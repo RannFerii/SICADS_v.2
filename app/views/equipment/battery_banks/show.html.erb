@@ -1,0 +1,70 @@
+<div class="row"><br></div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe,equipment_battery_banks_path  %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3>Detalles del Banco de baterías <span class="label label-default">  <%= @battery_bank.nomenclatura %></span></h3></div>
+    <div class="panel-body">
+      <div class="row"><br></div>
+      <div class="row"><br></div>
+      <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Nomenclatura:</strong>
+          <%= @battery_bank.nomenclatura %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Tipo de banco de baterías:</strong>
+          <%= @battery_bank.banco_baterias_type %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Marca:</strong>
+            <%= @battery_bank.marca %>
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Numero de celdas:</strong>
+          <%= @battery_bank.num_celdas %>
+         </p>
+        </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Volts totales:</strong>
+          <%= @battery_bank.volts_totales %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Fecha puesta servicio:</strong>
+          <%= @battery_bank.fecha_puesta_servicio %>
+        </p>
+       </div>
+      </div>
+      <div class="row"><br></div>
+      <div class="row"><br></div>
+      <div class="row show-grid">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-md-offset-5 float_right">
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+               <div class="btn-group" role="group" aria-label="...">
+                  <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-pencil" aria-hidden="true"></i>   Editar Banco de baterías</button>'.html_safe, edit_equipment_battery_bank_path(@battery_bank)%>
+               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

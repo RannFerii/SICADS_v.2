@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sicads</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <%= render 'sections/navbar' %>
+    <!-- <%= render 'sections/banner' %> -->
+    <!-- <p id="notice"><%= notice %></p> -->
+    <!--NOTIFICACIONES Y ALERTAS-->
+    <% if notice %>
+      <div  style='display:none' >
+        <input  id="notice_script" type="text" value="<%= notice %>" >
+      </div>
+      <script>
+      var notice_mensaje= document.getElementById("notice_script").value;
+       notifyMe_notice (notice_mensaje)
+      </script>
+      <!--<p class="alert alert-success" > <%= notice %></p>-->
+    <% end %>
+
+    <% if alert %>
+
+      <div  style='display:none' >
+        <input  id="alert_script" type="text" value="<%= alert %>" >
+      </div>
+      <script>
+      var alerta_mensaje= document.getElementById("alert_script").value;
+       notifyMe_alert (alerta_mensaje)
+      </script>
+      <!--<p class="alert alert-danger"><%= alert %></p>-->
+    <% end %>
+    <!--END- NOTIFICACIONES-ALERTAS-->
+    <%= yield %>
+    <%= render 'sections/footer' %>
+  </body>
+</html>

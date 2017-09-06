@@ -1,0 +1,12 @@
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe,equipment_battery_banks_path   %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"> <h4><b>Edición del Banco de baterías <span class="label label-default">  <%= @battery_bank.nomenclatura %></span></b></h4></div>
+      <div class="panel-body">
+        <div class="row"><br></div>
+	    <%= render 'form', battery_bank: @battery_bank %>

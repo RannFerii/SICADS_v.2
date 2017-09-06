@@ -1,0 +1,15 @@
+<tr class="nested-fields">
+  <td>
+    <%= link_to_remove_association "Eliminar Devanado", f, class: 'btn btn-primary btn-xs' %>
+  </td>
+  <td>
+    <%= f.label :Devanado %>
+     <%= f.select :devanado_type, Winding.devanado_types.keys.to_a, { prompt: 'Seleccionar' }  %> </td>
+    <td><%= f.input :devanado_kv %></td>
+    <td><%= f.input :porcentaje_z %></td>
+    <td><%= f.input :z_mva %></td>
+    <td><%= f.input :z_kv %></td>
+    <td>
+    <%= f.label :Conexion %>
+     <%= f.select :conexion_type, Winding.conexion_types.keys.to_a, { prompt: 'Seleccionar' }  %> </td>
+</tr>

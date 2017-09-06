@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marca: MyString
+  tipo: MyString
+  serie: MyString
+  num_pasos: MyString
+  phase: one
+
+two:
+  marca: MyString
+  tipo: MyString
+  serie: MyString
+  num_pasos: MyString
+  phase: two

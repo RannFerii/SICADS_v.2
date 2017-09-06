@@ -1,0 +1,131 @@
+<div class="row"><br></div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe,equipment_switches_path %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3>Detalles del Banco de baterías <span class="label label-default"> <%= @switch.nomenclatura %></span></h3></div>
+    <div class="panel-body">
+      <div class="row"><br></div>
+      <div class="row"><br></div>
+      <div class="row">
+       <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Nomenclatura:</strong>
+            <%= @switch.nomenclatura %>
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Tipo de Interruptor :</strong>
+          <%= @switch.interruptor_type %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Tipo de Mecanismo :</strong>
+            <%= @switch.mecanismo_type %>
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+            <strong>Marca:</strong>
+            <%= @switch.marca %>
+         </p>
+        </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Voltaje control:</strong>
+           <%= @switch.voltaje_control %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Tension fuerza:</strong>
+          <%= @switch.tension_fuerza %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Tension sistema:</strong>
+          <%= @switch.tension_sistema %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Número serie:</strong>
+           <%= @switch.num_serie %>
+        </p>
+       </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Kv nom:</strong>
+           <%= @switch.kv_nom %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Amp nom:</strong>
+          <%= @switch.amp_nom %>
+        </p>
+       </div>  
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Capacidad interruptiva:</strong>
+           <%= @switch.capacidad_interruptiva %>
+        </p>
+       </div>    
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Nivel basico impulso:</strong>
+           <%= @switch.nivel_basico_impulso %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Medio ext:</strong>
+          <%= @switch.medio_ext %>
+        </p>
+       </div>  
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Fecha fabricacion:</strong>
+          <%= @switch.fecha_fabricacion %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Fecha puesta servicio:</strong>
+          <%= @switch.fecha_puesta_servicio %>
+        </p>
+       </div>     
+     </div>
+     <div class="row"><br></div>
+     <div class="row"><br></div>
+     <div class="row show-grid">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-md-offset-5 float_right">
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+               <div class="btn-group" role="group" aria-label="...">
+                  <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-pencil" aria-hidden="true"></i>   Editar Cuchilla</button>'.html_safe, edit_equipment_switch_path(@switch) %>
+               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,83 @@
+    <%= simple_form_for(['control',@bay]) do |f| %>
+      <%= f.error_notification %>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row">
+           <div class="col-xs-6 col-md-4">
+              <div class="form-group">  
+                <%= f.input :nomenclatura ,label: 'Nomenclatura',class_html: { class: 'form-control' }  %>
+              </div>
+           </div>
+           <div class="col-xs-6 col-md-4">
+             <div class="form-group">  
+              <%= f.label :Subestación ,class:"col-sm-10 control-label" %>
+              <div class="col-sm-10">
+               <%= f.select :substation_id,Substation.all.map { |u| [u.nombre_subestacion, u.id ]},{ prompt: '- Seleccionar -' } ,{class:"selectpicker show-tick"}  %>
+              </div>
+             </div>
+           </div>
+           <div class="col-xs-6 col-md-4">
+             <div class="form-group">  
+              <%= f.label :Reactor ,class:"col-sm-10 control-label" %>
+              <div class="col-sm-10">
+                <%= f.select :reactor_id, Reactor.all.map { |u| [u.nomenclatura, u.id ]}, { prompt: '- Seleccionar -' } ,{class:"selectpicker show-tick"}  %>
+              </div>
+             </div>
+           </div>
+        </div>
+        <div class="row"><br></div>
+        <div class="row">
+           <div class="col-xs-6 col-md-4">
+           </div>
+           <div class="col-xs-6 col-md-4">
+             <div class="form-group">  
+                <%= f.label :Apartarrayos ,class:"col-sm-10 control-label" %>
+                <div class="col-sm-10">
+                  <%= f.select :lightning_arrester_id, LightningArrester.all.map { |u| [u.nomenclatura, u.id ]}, { prompt: '- Seleccionar -' } ,{class:"selectpicker show-tick"}  %>
+                </div>
+             </div>
+           </div>
+           <div class="col-xs-6 col-md-4">
+             <div class="form-group">  
+                <%= f.label :Banco_de_baterias ,class:"col-sm-10 control-label" %>
+                <div class="col-sm-10">
+                 <%= f.select :battery_bank_id, BatteryBank.all.map { |u| [u.nomenclatura, u.id ]}, { prompt: '- Seleccionar -' } ,{class:"selectpicker show-tick"}  %>
+                </div>
+             </div>
+           </div>
+        </div> 
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row">
+          <div class="col-xs-3 col-md-offset-4">
+             <div class="form-group">  
+              <%= f.label :Cuchillas ,class:"col-sm-10 control-label" %>
+              <div class="col-sm-10">
+                <%= f.collection_select :blade_ids, Blade.all, :id,:nomenclatura,{},{multiple:true, class: "chosen-select",id:"screen-selection"} %>
+              </div>
+             </div>
+           </div>
+        </div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row show-grid">
+          <div class="col-md-3"></div>
+          <div class="col-md-4 col-md-offset-5 float_right">
+              <div class="btn-toolbar" role="toolbar" aria-label="...">
+                 <div class="btn-group" role="group" aria-label="...">
+                    <button  class="btn btn-default" type="submit" >  
+                        <i class="fa fa-check" aria-hidden="true"></i> Crear Bahía
+                    </button>
+                 </div>
+                 <div class="btn-group" role="group" aria-label="...">
+                    <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-ban" aria-hidden="true"></i> Cancelar
+                    </button>'.html_safe,control_bays_path %>
+                    <% end %>
+                 </div>
+              </div>
+          </div>
+        </div>
+      </div>
+   </div>
+</div>

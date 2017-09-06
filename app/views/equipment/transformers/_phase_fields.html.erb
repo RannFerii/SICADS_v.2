@@ -1,0 +1,109 @@
+<div class="nested-fields">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <%= f.label :Fase %>
+            <%= f.select :fase, Phase.fases.keys.to_a, { prompt: 'Seleccionar'} %>  
+            <%= link_to_remove_association "Eliminar fase", f, class: 'btn btn-danger btn-xs' %> 
+        </div>
+    </div>
+    <div class="row"> <br> </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :marca %>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :fecha_fabricacion %>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :fecha_puesta_servicio %>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :num_serie %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :relacion_transformacion %>
+        </div>    
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :masa_embarque %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :esquema_nucleo %>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :total_aceite %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :sistema_enfriamiento %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :mampara %>
+        </div> 
+
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :num_taps %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :sistema_contra_incendios %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :fosa_captadora_aceite %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :tension_sistema %>
+        </div> 
+    </div>
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :clase_exactitud %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :tipo_expancion_aceite %>
+        </div> 
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :tipo_envolvente %>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+           <%= f.input :mva %>
+        </div>  
+        <div class="col-xs-6 col-sm-3">
+            <%= f.input :tipo_envolvente %>
+        </div> 
+    </div>
+
+    <div class="container">
+        <div class="tap_changers">
+            <div class="page-header">
+                <h1>Cambiador de Taps<small> del transformador</small></h1>
+            </div>
+            <%= f.simple_fields_for :tap_changers do |tap_changer| %>
+                <%= render 'tap_changer_fields', f: tap_changer %>
+            <% end %>
+            <div class="form-actions">
+               <%= link_to_add_association '<i class="fa fa-plus" aria-hidden="true"></i> Agregar cambiador de Taps'.html_safe, f, :tap_changers %>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="trans_mouthpiece">
+            <div class="page-header">
+             <h1>Boquillas<small> del transformador</small></h1>
+            </div>
+            <%= f.simple_fields_for :trans_mouthpieces do |trans_mouthpiece| %>
+            <%= render 'trans_mouthpiece_fields', f: trans_mouthpiece %>
+            <% end %>
+          <div class="form-actions">
+            <%= link_to_add_association '<i class="fa fa-plus" aria-hidden="true"></i> Agregar Boquilla'.html_safe, f,:trans_mouthpieces %>
+          </div>
+        </div>
+    </div>
+</div>
+<div class="row"> <br> </div>

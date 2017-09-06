@@ -1,0 +1,14 @@
+class CreateReactMouthpieces < ActiveRecord::Migration[5.0]
+  def change
+    create_table :react_mouthpieces do |t|
+      t.string :marca
+      t.string :tipo
+      t.string :num_serie
+      t.string :kv
+      t.string :amp
+      t.date :fecha_fabricacion
+      t.belongs_to :reactor, foreign_key: true
+      t.timestamps
+    end
+  end
+end

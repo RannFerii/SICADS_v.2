@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomenclatura: MyString
+  num_secciones: 1
+  apartarrayos_type: 1
+  descarga_ka: MyString
+  kv_sist: MyString
+  marca: MyString
+  num_serie: MyString
+  fecha_fabricacion: 2017-08-30
+  fecha_puesta_servicio: 2017-08-30
+
+two:
+  nomenclatura: MyString
+  num_secciones: 1
+  apartarrayos_type: 1
+  descarga_ka: MyString
+  kv_sist: MyString
+  marca: MyString
+  num_serie: MyString
+  fecha_fabricacion: 2017-08-30
+  fecha_puesta_servicio: 2017-08-30

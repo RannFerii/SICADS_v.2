@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  equipo_medicion_type: 1
+  modelo: MyString
+  marca: MyString
+  num_serie: MyString
+  num_inv_eimp: MyString
+
+two:
+  equipo_medicion_type: 1
+  modelo: MyString
+  marca: MyString
+  num_serie: MyString
+  num_inv_eimp: MyString

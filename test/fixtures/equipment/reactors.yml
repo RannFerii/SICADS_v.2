@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomenclatura: MyString
+  reactor_type: 1
+  marca: MyString
+  num_serie: MyString
+  mva: 1
+  clase_enf: MyString
+  kv_nom_at: 1
+  kv_nom_bt: 1
+  kv_nom_terciario: 1
+  fecha_fabricacion: 2017-08-25
+  porcentaje_z: MyString
+  fecha_puesta_servicio: 2017-08-25
+
+two:
+  nomenclatura: MyString
+  reactor_type: 1
+  marca: MyString
+  num_serie: MyString
+  mva: 1
+  clase_enf: MyString
+  kv_nom_at: 1
+  kv_nom_bt: 1
+  kv_nom_terciario: 1
+  fecha_fabricacion: 2017-08-25
+  porcentaje_z: MyString
+  fecha_puesta_servicio: 2017-08-25

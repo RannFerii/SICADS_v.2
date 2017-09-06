@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_calibracion: 2017-08-31
+  fecha_vencimiento: 2017-08-31
+  measurement_equipment: one
+
+two:
+  fecha_calibracion: 2017-08-31
+  fecha_vencimiento: 2017-08-31
+  measurement_equipment: two

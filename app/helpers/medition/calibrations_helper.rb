@@ -1,0 +1,2 @@
+module Medition::CalibrationsHelper
+end

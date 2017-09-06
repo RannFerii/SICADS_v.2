@@ -1,0 +1,121 @@
+<div class="row"><br></div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe, equipment_reactors_path  %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3>Detalles del Reactor <span class="label label-default">  <%= @reactor.nomenclatura %></span></h3></div>
+    <div class="panel-body">
+      <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Nomenclatura:</strong>
+          <%= @reactor.nomenclatura %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Tipo de reactor:</strong>
+          <%= @reactor.reactor_type %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Marca:</strong>
+            <%= @reactor.marca %>
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Numero de serie:</strong>
+          <%= @reactor.num_serie %>
+         </p>
+        </div>
+     </div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Mva:</strong>
+          <%= @reactor.mva %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Kv nom at:</strong>
+          <%= @reactor.kv_nom_at %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Kv nom bt:</strong>
+          <%= @reactor.kv_nom_bt %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Kv nom terciario:</strong>
+          <%= @reactor.kv_nom_terciario %>
+        </p>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Fecha de fabricación:</strong>
+          <%= @reactor.fecha_fabricacion %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Fecha puesta en servicio:</strong>
+          <%= @reactor.fecha_puesta_servicio %>
+        </p>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <h1 class="page-header">Boquillas </h1>
+        </div>
+      </div>
+      <%  @reactor.react_mouthpieces.each do |t| %>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <label>Marca: </label> <%= t.marca %> 
+        </div>
+        <div class="col-xs-6 col-md-3">
+           <label>Tipo: </label> <%= t.tipo %> 
+        </div>
+        <div class="col-xs-6 col-md-3">
+           <label>Numero de serie: </label> <%= t.num_serie %>
+        </div> 
+      </div>
+      <div class="row"><br></div>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <label>Kv: </label><%= t.kv %> 
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <label>Amp: </label><%= t.amp %> 
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <label>Fecha de fabricación: </label> <%= t.fecha_fabricacion %> 
+        </div>
+      </div>
+      <% end %>
+      <div class="row"><br></div>
+      <div class="row show-grid">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-md-offset-5 float_right">
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+               <div class="btn-group" role="group" aria-label="...">
+                  <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-pencil" aria-hidden="true"></i>   Editar Reactor</button>'.html_safe, edit_equipment_reactor_path(@reactor) %>
+               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

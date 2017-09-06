@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fase: 1
+  marca: MyString
+  num_serie: MyString
+  fecha_fabricacion: 2017-08-24
+  impedencia_max_hx_capacidad: MyString
+  impedancia_max_hy_capacidad: MyString
+  impedancia_max_xy_capacidad: MyString
+  relacion_transformacion: MyString
+  capacidad: MyString
+  transformacion: MyString
+  masa_embarque: 1
+  esquema_nucleo: 1
+  total_aceite: 1
+  sistema_enfriamiento: MyString
+  mampara: false
+  cambiador_taps: MyString
+  sistema_contra_incendios: MyString
+  fosa_captadora_aceite: MyString
+  tension_sistema: MyString
+  capacitancia: MyString
+  clase_exactitud: MyString
+  tipo_expancion_aceite: MyString
+  tipo_envolvente: MyString
+  mva: MyString
+  num_taps: 1
+  kv_nom_atkv_nom_bt: MyString
+  kv_nom_terciario: MyString
+  porcentace_z: MyString
+  fecha_puesta_servicio: 2017-08-24
+  transformer: one
+
+two:
+  fase: 1
+  marca: MyString
+  num_serie: MyString
+  fecha_fabricacion: 2017-08-24
+  impedencia_max_hx_capacidad: MyString
+  impedancia_max_hy_capacidad: MyString
+  impedancia_max_xy_capacidad: MyString
+  relacion_transformacion: MyString
+  capacidad: MyString
+  transformacion: MyString
+  masa_embarque: 1
+  esquema_nucleo: 1
+  total_aceite: 1
+  sistema_enfriamiento: MyString
+  mampara: false
+  cambiador_taps: MyString
+  sistema_contra_incendios: MyString
+  fosa_captadora_aceite: MyString
+  tension_sistema: MyString
+  capacitancia: MyString
+  clase_exactitud: MyString
+  tipo_expancion_aceite: MyString
+  tipo_envolvente: MyString
+  mva: MyString
+  num_taps: 1
+  kv_nom_atkv_nom_bt: MyString
+  kv_nom_terciario: MyString
+  porcentace_z: MyString
+  fecha_puesta_servicio: 2017-08-24
+  transformer: two

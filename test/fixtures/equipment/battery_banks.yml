@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomenclatura: MyString
+  marca: MyString
+  banco_baterias_type: 1
+  num_celdas: 1
+  capacidad_ah: MyString
+  volts_totales: MyString
+  fecha_puesta_servicio: 2017-08-30
+
+two:
+  nomenclatura: MyString
+  marca: MyString
+  banco_baterias_type: 1
+  num_celdas: 1
+  capacidad_ah: MyString
+  volts_totales: MyString
+  fecha_puesta_servicio: 2017-08-30

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  devanado_type: 1
+  porcentajez: MyString
+  zkv: MyString
+  kmva: MyString
+  conexion_type: 1
+  phase: one
+
+two:
+  devanado_type: 1
+  porcentajez: MyString
+  zkv: MyString
+  kmva: MyString
+  conexion_type: 1
+  phase: two

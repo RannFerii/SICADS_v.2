@@ -1,0 +1,48 @@
+<div class="row"><br></div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe, medition_calibrations_path %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3>Detalles de la calibración <span class="label label-default">  <%= @calibration.measurement_equipment.num_serie %></span></h3></div>
+    <div class="panel-body">
+      <div class="row"><br></div>
+      <div class="row"><br></div>
+      <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Fecha calibracion:</strong>
+          <%= @calibration.fecha_calibracion %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Fecha vencimiento:</strong>
+          <%= @calibration.fecha_vencimiento %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Número de serie :</strong>
+            <%= @calibration.measurement_equipment.num_serie %>
+          </p>
+        </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row"><br></div>
+     <div class="row show-grid">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-md-offset-5 float_right">
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+               <div class="btn-group" role="group" aria-label="...">
+                  <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-pencil" aria-hidden="true"></i>   Editar calibración</button>'.html_safe, edit_medition_calibration_path(@calibration)%>
+               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

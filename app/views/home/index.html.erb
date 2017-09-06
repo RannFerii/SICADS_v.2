@@ -1,0 +1,65 @@
+  <% if current_user.nil? %>
+ <div class="container-fluid home-free">
+  <div class="row banner">
+     <div class="col-xs-6 col-md-4">
+      <a href="http://www.cfe.gob.mx/paginas/home.aspx"><img src=/img/logo_cfe.png  class="cfe_logo_mex"></a>
+     </div>
+     <div class="col-xs-6 col-md-4">
+       <a href="http://www.cfe.gob.mx/paginas/home.aspx"><img src=/img/cfe-home.png class="cfe_logo"></a>
+     </div>
+     <div class="col-xs-6 col-md-4">
+       <br>
+         <strong><em> <p class="text-right">GERENCIA REGIONAL DE TRANSMISIÓN CENTRAL ZONA DE TRANSMISIÓN GUERRERO</p></em></strong>
+     </div>
+
+  </div>
+  <div class="mision_vision">
+    <div class="row mision">
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <div class="background-black">
+            <blockquote>
+              <h3>MISIÓN</h3>
+              <p  class="text-justify">Prestar el servicio público de energía eléctrica con criterios de suficiencia, competitividad y sustentabilidad, comprometidos con la satisfacción de los clientes, con el desarrollo del país y con la preservación del medio ambiente.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row vision">
+      <div class="col-md-12">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="background-black">
+            <blockquote>
+             <h3>VISIÓN AL 2030</h3>
+              <p  class="text-justify">Ser una empresa de energía, de las mejores en el sector eléctrico a nivel mundial, con presencia internacional, fortaleza financiera e ingresos adicionales por servicios relacionados con su capital intelectual e infraestructura física y comercial.<br>
+              Una empresa reconocida por su atención al cliente, competitividad, transparencia, calidad en el servicio, capacidad de su personal, vanguardia tecnológica y aplicación de criterios de desarrollo sustentable. </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% else %>
+ 
+<div class="container-fluid home-user">
+  <!-- <div class="row banner">
+     <div class="col-xs-6 col-md-4">
+      <a href="http://www.cfe.gob.mx/paginas/home.aspx"><img src=/img/logo_cfe.png  class="cfe_logo_mex"></a>
+     </div>
+     <div class="col-xs-6 col-md-4">
+       <a href="http://www.cfe.gob.mx/paginas/home.aspx"><img src=/img/cfe-home.png class="cfe_logo"></a>
+     </div>
+     <div class="col-xs-6 col-md-4">
+       <br>
+         <strong><em> <p class="text-right">GERENCIA REGIONAL DE TRANSMISIÓN CENTRAL ZONA DE TRANSMISIÓN GUERRERO</p></em></strong>
+     </div>
+
+  </div> -->
+
+</div>
+      <% end %>

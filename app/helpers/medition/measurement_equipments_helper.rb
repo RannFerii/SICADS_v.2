@@ -1,0 +1,2 @@
+module Medition::MeasurementEquipmentsHelper
+end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marca: MyString
+  tipo: MyString
+  num_serie: MyString
+  kv: MyString
+  amp: MyString
+  fecha_fabricacion: 2017-08-29
+  phase: one
+
+two:
+  marca: MyString
+  tipo: MyString
+  num_serie: MyString
+  kv: MyString
+  amp: MyString
+  fecha_fabricacion: 2017-08-29
+  phase: two

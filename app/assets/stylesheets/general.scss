@@ -1,0 +1,79 @@
+
+ /*clases predeterminadas*/
+
+.page-header{
+	    display: -webkit-box;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #454545;
+}
+
+.search{
+	float: none ;
+}
+
+
+/*etiquetas html*/
+footer{
+	    
+}
+
+/*botones*/
+
+.btn-success {
+
+    background-color: #00ad4e;
+}
+
+.btn-info {
+    background-color: #04355e;
+}
+
+.btn-info:hover {
+    background-color: #026a89;
+}
+
+.btn-warning {
+    background-color: #cf7a00;
+}
+
+/*panel*/
+
+.panel-success > .panel-heading {
+    color: #d7d7cd;
+    background-color: #454545;
+    border-color: #000000;
+}
+
+.panel-heading {
+    padding: 1px 15px;
+}
+.panel{
+        margin-bottom: 300px;
+
+}
+
+.panel-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*float right*/
+
+.float_right
+{
+    float: right;
+}
+
+/*div background*/
+.background-black
+{
+
+      background-color: rgba(0, 0, 0, 0.8);
+      color:white;
+}
+
+.margin_footer{
+    margin-bottom: 200px;
+}

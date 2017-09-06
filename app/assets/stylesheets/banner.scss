@@ -1,0 +1,125 @@
+
+
+@media(max-width: 500px){
+  .cfe_logo_mex{
+    background-size: 100vw;
+  }
+}
+
+.ground-home{
+    background-image: url(/img/tower-wallpaper.jpg);
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+
+.ground-home2{
+        background-image: url(/img/tower-wallpaper2.jpg);
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: cover;
+    /* padding-top: 50px; */
+    /* padding-bottom: 100%; */
+}
+
+.welcome_user{
+    -webkit-text-stroke-color: red;
+        -webkit-text-stroke-width: 1px; 
+}
+/*.mision{
+    background-color: black;
+    padding: 15px;
+    color: white;
+}*/
+
+.container-home{   
+    width: 625px;
+    height: 202px;
+    /*position: absolute;*/
+    /* right: -10px; */
+    margin: 0 auto;
+    /* top: 20px; */
+
+}
+
+.div-img-home{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    .img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 200px; */
+    /* height: 200px; */
+    /* border-radius: 150px; */
+    /* -webkit-border-radius: 150px; */
+    -moz-border-radius: 150px;
+    transform: translate(0px);
+    -ms-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -webkit-transform: translate(0px);
+    -o-transform: translate(0px);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out; 
+    }      
+    .text-home{
+        font-family: 'Open Sans';
+        margin-left: 43px;
+    	margin-top: -118px;
+    	width: 400px;
+    	display: none;
+    	animation: fadeIn 3s ;
+        color: rgb(0, 173, 78);
+        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-width: 1px; 
+
+    }
+
+
+    &:hover{
+
+			.text-home {
+			font-family: 'Arial black';
+			font-size: 40px;
+			font-style: italic;
+			display: block;
+            -webkit-transform:translate(200px,0px);
+
+			@keyframes fadeIn { 
+				  from { opacity: 0; } 
+				}
+
+			}
+
+			
+
+	        .img{
+	            transform:translate(-180px,0px);
+	            -ms-transform:translate(-180px,0px);// IE 9 
+	            -moz-transform:translate(-180px,0px); // Firefox 
+	            -webkit-transform:translate(-350px,0px); // Safari and Chrome 
+	            -o-transform:translate(-180px,0px); // Opera
+	        }
+
+            
+             
+            
+     } 
+}
+
+#top_localizacion{
+    color:red;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}

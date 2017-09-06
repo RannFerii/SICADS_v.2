@@ -1,0 +1,91 @@
+<div class="row"><br></div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe,equipment_lightning_arresters_path %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3>Detalles del Apartarrayo <span class="label label-default">  <%= @lightning_arrester.nomenclatura %></span></h3></div>
+    <div class="panel-body">
+    <div class="row"><br></div>
+    <div class="row"><br></div>
+      <div class="row">
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Nomenclatura:</strong>
+          <%= @lightning_arrester.nomenclatura %>
+         </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Numero de secciones:</strong>
+            <%= @lightning_arrester.num_secciones %>
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <p>
+            <strong>Tipo de Apartarrayos :</strong>
+            <%= @lightning_arrester.apartarrayos_type %>
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+         <p>
+           <strong>Descarga ka:</strong>
+           <%= @lightning_arrester.descarga_ka %>
+         </p>
+        </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Kv sist:</strong>
+           <%= @lightning_arrester.kv_sist %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Marca:</strong>
+           <%= @lightning_arrester.marca %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Numero serie:</strong>
+          <%= @lightning_arrester.num_serie %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+         <p>
+          <strong>Fecha fabricacion:</strong>
+          <%= @lightning_arrester.fecha_fabricacion %>
+         </p>
+       </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Fecha puesta servicio:</strong>
+           <%= @lightning_arrester.fecha_puesta_servicio %>
+        </p>
+       </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row"><br></div>
+     <div class="row show-grid">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-md-offset-5 float_right">
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+               <div class="btn-group" role="group" aria-label="...">
+                  <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-pencil" aria-hidden="true"></i>   Editar Apartarrayo </button>'.html_safe, edit_equipment_lightning_arrester_path(@lightning_arrester) %>
+               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

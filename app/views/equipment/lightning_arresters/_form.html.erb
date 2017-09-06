@@ -1,0 +1,83 @@
+
+         <%= simple_form_for(['equipment',@lightning_arrester]) do |f| %>
+          <%= f.error_notification %>
+          <div class="row"><br></div>
+          <div class="row"><br></div>
+          <div class="row">
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">  
+                <%= f.input :nomenclatura  ,label: 'Nomenclatura',class_html: { class: 'form-control' }  %>
+                </div>
+             </div>
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">  
+                <%= f.input :marca,label: 'Marca',class_html: { class: 'form-control' }  %>
+                </div>
+             </div>
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">  
+                <%= f.input :apartarrayos_type ,label: 'Tipo de apartarrayos',class_html: { class: 'form-control' }  %>
+                </div>
+             </div>
+          </div>
+          <div class="row">
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">
+                 <%= f.input :num_secciones,label: 'Numero de secciones',class_html: { class: 'form-control' }  %>
+               </div>
+             </div>
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">
+              <%= f.input :descarga_ka,label:'Descarga Ka',class_html: { class: 'form-control_input-md' }  %>
+               </div>
+             </div>
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">
+                <%= f.input :kv_sist,label:'Kv sist',class_html: { class: 'form-control_input-md' }  %>
+               </div>
+             </div>
+          </div>
+          <div class="row">
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">
+                <%= f.input :num_serie,label: 'Numero de serie',class_html: { class: 'form-control_input-md' }  %>
+               </div>
+             </div>
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">
+                 <%= f.input :fecha_fabricacion ,label: 'Fecha de fabricación',class_html: { class: 'form-control' }  %>
+               </div>
+             </div>
+             <div class="col-xs-6 col-md-4">
+               <div class="form-group">
+                <%= f.input :fecha_puesta_servicio,label: 'Fecha puesta en servicio',class_html: { class: 'form-control' }  %>
+               </div>
+             </div>
+          </div>
+          </div>
+          <div class="row"><br></div>
+          <div class="row"><br></div>
+          <div class="row"><br></div>
+          <div class="row show-grid">
+            <div class="col-md-3"></div>
+            <div class="col-md-4 col-md-offset-5 float_right">
+                <div class="btn-toolbar" role="toolbar" aria-label="...">
+                   <div class="btn-group" role="group" aria-label="...">
+                      <button  class="btn btn-default" type="submit" >  
+                          <i class="fa fa-check" aria-hidden="true"></i> Crear apartarrayo
+                      </button>
+                   </div>
+                   <div class="btn-group" role="group" aria-label="...">
+                      <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-ban" aria-hidden="true"></i> Cancelar
+                      </button>'.html_safe, equipment_lightning_arresters_path %>
+                      <% end %>
+                   </div>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+      
+
+

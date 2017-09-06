@@ -1,0 +1,2 @@
+module Equipment::BatteryBanksHelper
+end

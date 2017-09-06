@@ -1,0 +1,102 @@
+<div class="row"><br></div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <%= link_to '<button class="btn btn-default btn-sm">
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button>'.html_safe,equipment_blades_path %>
+</div>
+<div class="row"><br></div>
+<div class="container-fluid">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3>Detalles de la cuchilla <span class="label label-default">  <%= @blade.nomenclatura %></span></h3></div>
+    <div class="panel-body">
+    <div class="row"><br></div>
+    <div class="row"><br></div>
+     <div class="row">
+     <div class="col-xs-6 col-md-3">
+       <p>
+        <strong>Nomenclatura:</strong>
+        <%= @blade.nomenclatura %>
+       </p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+       <p>
+        <strong>Tipo de Cuchilla :</strong>
+        <%= @blade.cuchilla_type %>
+       </p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Tipo de Mecanismo :</strong>
+          <%= @blade.mecanismo_type %>
+        </p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+       <p>
+        <strong>Nivel basico impulso:</strong>
+        <%= @blade.nivel_basico_impulso %>
+       </p>
+      </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Marca:</strong>
+          <%= @blade.marca %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Num serie:</strong>
+          <%= @blade.num_serie %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Tension sistema:</strong>
+          <%= @blade.tension_sistema %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+           <strong>Fecha puesta servicio:</strong>
+           <%= @blade.fecha_puesta_servicio %>
+        </p>
+       </div>
+     </div>
+     <div class="row"><br></div>
+     <div class="row">
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Fecha fabricacion:</strong>
+          <%= @blade.fecha_fabricacion %>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Kv nom:</strong>
+          <%= @blade.kv_nom %>
+        </p>
+       </div>  
+       <div class="col-xs-6 col-md-3">
+        <p>
+          <strong>Amp nom:</strong>
+          <%= @blade.amp_nom %>
+        </p>
+       </div>    
+     </div>
+     <div class="row"><br></div>
+     <div class="row"><br></div>
+     <div class="row show-grid">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-md-offset-5 float_right">
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+               <div class="btn-group" role="group" aria-label="...">
+                  <%= link_to '<button type="submit" class="btn btn-default" ><i class="fa fa-pencil" aria-hidden="true"></i>   Editar Cuchilla</button>'.html_safe, edit_equipment_blade_path(@blade)%>
+               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
