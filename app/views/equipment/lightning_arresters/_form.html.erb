@@ -5,18 +5,20 @@
           <div class="row"><br></div>
           <div class="row">
              <div class="col-xs-6 col-md-4">
-               <div class="form-group">  
+               <div class="form-group">
                 <%= f.input :nomenclatura  ,label: 'Nomenclatura',class_html: { class: 'form-control' }  %>
                 </div>
              </div>
              <div class="col-xs-6 col-md-4">
-               <div class="form-group">  
+               <div class="form-group">
                 <%= f.input :marca,label: 'Marca',class_html: { class: 'form-control' }  %>
                 </div>
              </div>
-             <div class="col-xs-6 col-md-4">
-               <div class="form-group">  
-                <%= f.input :apartarrayos_type ,label: 'Tipo de apartarrayos',class_html: { class: 'form-control' }  %>
+          <div class="col-xs-6 col-md-4">
+              <div class="form-group">
+                 <%= f.label :Tipo_de_Apartarrayo ,class:"col-sm-10 control-label" %>
+                <div class="col-sm-10">
+                 <%= f.select :apartarrayos_type, LightningArrester.apartarrayos_types.keys.to_a, { prompt: 'Seleccionar'},{class:"selectpicker show-tick"} %>
                 </div>
              </div>
           </div>
@@ -45,12 +47,12 @@
              </div>
              <div class="col-xs-6 col-md-4">
                <div class="form-group">
-                 <%= f.input :fecha_fabricacion ,label: 'Fecha de fabricación',class_html: { class: 'form-control' }  %>
+              <%= f.input :fecha_puesta_servicio,start_year: Date.today.year - 57, end_year: Date.today.year,class_html: { class: 'form-control_input-md' }  %>
                </div>
              </div>
              <div class="col-xs-6 col-md-4">
                <div class="form-group">
-                <%= f.input :fecha_puesta_servicio,label: 'Fecha puesta en servicio',class_html: { class: 'form-control' }  %>
+                <%= f.input :fecha_fabricacion,start_year: Date.today.year - 57, end_year: Date.today.year,class_html: { class: 'form-control_input-md' }  %>
                </div>
              </div>
           </div>
@@ -63,7 +65,7 @@
             <div class="col-md-4 col-md-offset-5 float_right">
                 <div class="btn-toolbar" role="toolbar" aria-label="...">
                    <div class="btn-group" role="group" aria-label="...">
-                      <button  class="btn btn-default" type="submit" >  
+                      <button  class="btn btn-default" type="submit" >
                           <i class="fa fa-check" aria-hidden="true"></i> Crear apartarrayo
                       </button>
                    </div>
@@ -78,6 +80,6 @@
       </div>
   </div>
 </div>
-      
+
 
 

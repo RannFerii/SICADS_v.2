@@ -1,7 +1,7 @@
 <div class="nested-fields">
 	<div class="row">
-        <div class="col-xs-6 col-sm-3">  
-            <%= link_to_remove_association "Eliminar esta boquilla", f, class: 'btn btn-danger btn-xs' %> 
+        <div class="col-xs-6 col-sm-3">
+            <%= link_to_remove_association "Eliminar esta boquilla", f, class: 'btn btn-danger btn-xs' %>
         </div>
     </div>
     <div class="row"> <br> </div>
@@ -10,7 +10,7 @@
             <%= f.input :marca %>
         </div>
         <div class="col-xs-6 col-sm-3">
-            <%= f.input :tipo %> 
+            <%= f.input :tipo %>
         </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :num_serie %>
@@ -25,7 +25,7 @@
            <%= f.input :amp %>
         </div>
         <div class="col-xs-7 col-sm-4">
-           <%= f.input :fecha_fabricacion %>
+        <%= f.input :fecha_fabricacion,start_year: Date.today.year - 57, end_year: Date.today.year  %>
         </div>
     </div>
  </div>

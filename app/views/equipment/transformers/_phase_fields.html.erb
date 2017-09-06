@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-xs-6 col-sm-3">
             <%= f.label :Fase %>
-            <%= f.select :fase, Phase.fases.keys.to_a, { prompt: 'Seleccionar'} %>  
-            <%= link_to_remove_association "Eliminar fase", f, class: 'btn btn-danger btn-xs' %> 
+            <%= f.select :fase, Phase.fases.keys.to_a, { prompt: 'Seleccionar'} %>
+            <%= link_to_remove_association "Eliminar fase", f, class: 'btn btn-danger btn-xs' %>
         </div>
     </div>
     <div class="row"> <br> </div>
@@ -12,10 +12,10 @@
             <%= f.input :marca %>
         </div>
         <div class="col-xs-6 col-sm-3">
-            <%= f.input :fecha_fabricacion %>
+            <%= f.input :fecha_fabricacion,start_year: Date.today.year - 57, end_year: Date.today.year  %>
         </div>
         <div class="col-xs-6 col-sm-3">
-            <%= f.input :fecha_puesta_servicio %>
+            <%= f.input :fecha_puesta_servicio,start_year: Date.today.year - 57, end_year: Date.today.year  %>
         </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :num_serie %>
@@ -24,59 +24,59 @@
     <div class="row">
         <div class="col-xs-6 col-sm-3">
             <%= f.input :relacion_transformacion %>
-        </div>    
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :masa_embarque %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :esquema_nucleo %>
-        </div> 
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-6 col-sm-3">
             <%= f.input :total_aceite %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :sistema_enfriamiento %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :mampara %>
-        </div> 
+        </div>
 
     </div>
     <div class="row">
         <div class="col-xs-6 col-sm-3">
             <%= f.input :num_taps %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :sistema_contra_incendios %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :fosa_captadora_aceite %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :tension_sistema %>
-        </div> 
+        </div>
     </div>
     <div class="row">
 
         <div class="col-xs-6 col-sm-3">
             <%= f.input :clase_exactitud %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :tipo_expancion_aceite %>
-        </div> 
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :tipo_envolvente %>
-        </div> 
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-6 col-sm-3">
            <%= f.input :mva %>
-        </div>  
+        </div>
         <div class="col-xs-6 col-sm-3">
             <%= f.input :tipo_envolvente %>
-        </div> 
+        </div>
     </div>
 
     <div class="container">
