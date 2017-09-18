@@ -176,6 +176,36 @@
            <label>Numero de pasos: </label> <%= t.num_pasos %> 
         </div>
       </div>
+      <% end %>
+      <div class="row"><br></div>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <h1 class="page-header">Devanados</h1>
+        </div>
+      </div>
+      <div class="row"><br></div>
+      <div class="row"><br></div>
+      <%  @transformer.windings.each do |t| %>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <label>Tipo de devanado: </label><%= t.devanado_type %>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <label>Kv: </label> <%= t.devanado_kv %> 
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <label>Porcentaje Z: </label> <%= t.porcentaje_z %>
+        </div>
+        <div class="col-xs-6 col-md-3">
+           <label> mva: </label> <%= t.z_mva %>
+        </div>
+      </div>
+      <div class="row"><br></div>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <label>Tipo de conexión: </label><%= t.conexion_type %>
+        </div>
+      </div>
       <div class="row"><br></div>
       <div class="row"><br></div>
       <div class="row"><br></div>

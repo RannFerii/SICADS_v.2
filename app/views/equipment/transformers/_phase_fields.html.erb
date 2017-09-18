@@ -105,5 +105,18 @@
           </div>
         </div>
     </div>
+    <div class="container">
+        <div class="windings">
+            <div class="page-header">
+             <h1>Devanados<small> del transformador</small></h1>
+            </div>
+            <%= f.simple_fields_for :windings do |winding| %>
+            <%= render 'winding_fields', f: winding %>
+            <% end %>
+          <div class="form-actions">
+            <%= link_to_add_association '<i class="fa fa-plus" aria-hidden="true"></i> Agregar Devanado'.html_safe, f,:windings %>
+          </div>
+        </div>
+    </div>
 </div>
 <div class="row"> <br> </div>

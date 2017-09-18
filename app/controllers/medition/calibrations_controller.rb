@@ -5,7 +5,7 @@ class Medition::CalibrationsController < ApplicationController
 
     def admin_only
       unless current_user.admin?
-       redirect_to   equipment_calibrations_path
+       redirect_to   medition_calibrations_path
        flash[:notice] = "Acceso Negado"
       end
     end

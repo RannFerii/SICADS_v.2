@@ -51,8 +51,6 @@
                       <th>Nomenclatura</th>
                       <th>Tipo de transformador</th>
                       <th>Tipo</th>
-                      <th>Numero activo fijo</th>
-                      <th>Fecha puesta servicio</th>
                       <th>Ver</th>
                       <th>Editar</th>
                       <th>Eliminar</th>
@@ -64,9 +62,6 @@
                         <td><%= transformer.nomenclatura %></td>
                         <td><%= transformer.transformador_type %></td>
                         <td><%= transformer.phase_type %></td>
-                        <td><%= transformer.numero_activo_fijo %></td>
-                        <td><%= transformer.fecha_puesta_servicio %></td>
-                        
                         <td><%= link_to '<button type="button" class="btn btn-default"><i class="fa fa-info" aria-hidden="true"></i></button>'.html_safe, equipment_transformer_path(transformer) %></td>
                         <td><%= link_to '<button type="button" class="btn btn-default"><i class="fa fa-pencil" aria-hidden="true"></i></button>'.html_safe, edit_equipment_transformer_path(transformer) %></td>
                         <td><%= link_to '<button type="button" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button>'.html_safe, equipment_transformer_path(transformer), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>

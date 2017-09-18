@@ -6,7 +6,7 @@ class Medition::MeasurementEquipmentsController < ApplicationController
   before_filter :admin_only, :except => [:show,:index]
     def admin_only
       unless current_user.admin?
-       redirect_to   equipment_measurement_equipments_path
+       redirect_to   medition_measurement_equipments_path
        flash[:notice] = "Acceso Negado"
       end
     end

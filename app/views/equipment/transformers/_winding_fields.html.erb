@@ -1,15 +1,31 @@
-<tr class="nested-fields">
-  <td>
-    <%= link_to_remove_association "Eliminar Devanado", f, class: 'btn btn-primary btn-xs' %>
-  </td>
-  <td>
-    <%= f.label :Devanado %>
-     <%= f.select :devanado_type, Winding.devanado_types.keys.to_a, { prompt: 'Seleccionar' }  %> </td>
-    <td><%= f.input :devanado_kv %></td>
-    <td><%= f.input :porcentaje_z %></td>
-    <td><%= f.input :z_mva %></td>
-    <td><%= f.input :z_kv %></td>
-    <td>
-    <%= f.label :Conexion %>
-     <%= f.select :conexion_type, Winding.conexion_types.keys.to_a, { prompt: 'Seleccionar' }  %> </td>
-</tr>
+<div class="nested-fields">
+   <div class="row">
+      <div class="col-xs-6 col-sm-3">
+          <%= link_to_remove_association "Eliminar devanado", f, class: 'btn btn-danger btn-xs' %>
+     </div>
+   </div>
+   <div class="row"> <br> </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-3">
+       <%= f.label :Devanado %>
+     <%= f.select :devanado_type, Winding.devanado_types.keys.to_a, { prompt: 'Seleccionar' }  %>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+       <%= f.input :devanado_kv %>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+       <%= f.input :z_mva %>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <%= f.input :z_kv %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-7 col-sm-5">
+     <%= f.label :Conexion %>
+     <%= f.select :conexion_type, Winding.conexion_types.keys.to_a, { prompt: 'Seleccionar' }  %> 
+    </div>
+  </div>
+</div>
+<div class="row"> <br> </div>

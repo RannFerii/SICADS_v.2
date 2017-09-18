@@ -14,11 +14,15 @@
     <!-- <%= render 'sections/banner' %> -->
     <!-- <p id="notice"><%= notice %></p> -->
     <!--NOTIFICACIONES Y ALERTAS-->
+    
     <% if notice %>
+      
+      <p class="alert alert-success" id="fade_out"> <%= notice %></p>
       <div  style='display:none' >
         <input  id="notice_script" type="text" value="<%= notice %>" >
       </div>
       <script>
+      $('#fade_out').fadeOut(5000);
       var notice_mensaje= document.getElementById("notice_script").value;
        notifyMe_notice (notice_mensaje)
       </script>
@@ -26,11 +30,12 @@
     <% end %>
 
     <% if alert %>
-
+      <p class="alert alert-danger" id="fade_out"><%= alert %></p>
       <div  style='display:none' >
         <input  id="alert_script" type="text" value="<%= alert %>" >
       </div>
       <script>
+      $('#fade_out').fadeOut(5000);
       var alerta_mensaje= document.getElementById("alert_script").value;
        notifyMe_alert (alerta_mensaje)
       </script>
